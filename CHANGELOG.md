@@ -6,6 +6,23 @@ All notable releases of the FinPOS app. Each version is also published as a
 The format is based on [Keep a Changelog](https://keepachangelog.com/);
 this project uses [Semantic Versioning](https://semver.org/).
 
+## [0.2.0] — 2026-06-01
+See each bank on its own: what came in, what went out, and how much is there now.
+
+### Added
+- **Banks tab.** A new tab shows a card per bank with **In** (money received), **Out** (money spent),
+  and **Balance now** — the latest balance the bank reported in its notifications (Privat24, ПУМБ and
+  monobank all included; Google Pay has no balance, so it shows "—").
+
+### Fixed
+- **Money received from a person now counts as income** (monobank "From: …" transfers were being
+  counted as spending).
+
+> Note: balances and the "received" fix apply to transactions captured from this version on — older
+> entries show "—" for balance until their next notification.
+
+[0.2.0]: https://github.com/drdanila/finpos-store/releases/tag/v0.2.0
+
 ## [0.1.3] — 2026-06-01
 Real card-to-card transfers between your own cards now show as one entry.
 
