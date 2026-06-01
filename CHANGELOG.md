@@ -6,6 +6,21 @@ All notable releases of the FinPOS app. Each version is also published as a
 The format is based on [Keep a Changelog](https://keepachangelog.com/);
 this project uses [Semantic Versioning](https://semver.org/).
 
+## [0.5.0] — 2026-06-01
+Smarter transfer detection, and a one-tap **Reprocess** that fixes your existing history.
+
+### Added
+- **Reprocess** button (top bar): re-reads your kept notification log and rebuilds the transaction
+  list with the latest logic — so earlier mistakes (duplicates, mis-labelled transfers) get corrected
+  on your existing data without clearing anything.
+
+### Improved
+- **Transfers between your own accounts** are now confirmed using the **card numbers** in the
+  notifications (from/to), which also avoids mislabelling an unrelated spend + income of the same
+  amount as a transfer.
+
+[0.5.0]: https://github.com/drdanila/finpos-store/releases/tag/v0.5.0
+
 ## [0.4.0] — 2026-06-01
 Fewer duplicates, and transfers between your own banks handled correctly.
 
