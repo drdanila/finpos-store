@@ -6,6 +6,19 @@ All notable releases of the FinPOS app. Each version is also published as a
 The format is based on [Keep a Changelog](https://keepachangelog.com/);
 this project uses [Semantic Versioning](https://semver.org/).
 
+## [0.1.1] — 2026-06-01
+Real-device calibration fixes.
+
+### Fixed
+- **ПУМБ transactions now captured.** ПУМБ's app uses a different package than expected, so its
+  notifications were ignored — corrected, and the "Купівля" format is parsed (the purchase amount,
+  never the available-balance line).
+- **No more duplicate rows / inflated total.** One purchase now produces exactly one transaction:
+  a notification re-delivered by the same source is treated as a duplicate, and a bank purchase
+  with its matching Google Pay notification collapses into a single "Confirmed by Google Pay" row.
+
+[0.1.1]: https://github.com/drdanila/finpos-store/releases/tag/v0.1.1
+
 ## [0.1.0] — 2026-06-01
 First test release (Google Play **Internal testing** / sideload).
 
