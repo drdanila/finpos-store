@@ -6,6 +6,20 @@ All notable releases of the FinPOS app. Each version is also published as a
 The format is based on [Keep a Changelog](https://keepachangelog.com/);
 this project uses [Semantic Versioning](https://semver.org/).
 
+## [0.1.2] — 2026-06-01
+Tells spending apart from income, and stops counting transfers.
+
+### Added
+- **Spending vs income.** Money you receive (top-ups, salary, refunds) no longer counts as
+  spending — the summary now shows **Spent** and a separate **Received** total, and each row is
+  signed (− spending, + income, green).
+
+### Fixed
+- **Card-to-card transfers between your own cards** no longer appear twice or inflate your spending —
+  the debit and credit are merged into a single neutral "Transfer" entry, counted as neither.
+
+[0.1.2]: https://github.com/drdanila/finpos-store/releases/tag/v0.1.2
+
 ## [0.1.1] — 2026-06-01
 Real-device calibration fixes.
 
