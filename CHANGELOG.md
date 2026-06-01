@@ -6,6 +6,20 @@ All notable releases of the FinPOS app. Each version is also published as a
 The format is based on [Keep a Changelog](https://keepachangelog.com/);
 this project uses [Semantic Versioning](https://semver.org/).
 
+## [0.1.3] — 2026-06-01
+Real card-to-card transfers between your own cards now show as one entry.
+
+### Fixed
+- **Transfer between your own cards = one neutral entry.** A transfer posts two notifications
+  (money leaving one card, arriving on another); these are now merged into a single "Transfer" that
+  counts as neither spending nor income — calibrated from a real on-device transfer. Previously both
+  halves were counted as spending, inflating your total.
+
+> Note: entries captured before this update keep their old label — tap **Clear database** once (or
+> just make a new transfer) to see the corrected behavior.
+
+[0.1.3]: https://github.com/drdanila/finpos-store/releases/tag/v0.1.3
+
 ## [0.1.2] — 2026-06-01
 Tells spending apart from income, and stops counting transfers.
 
