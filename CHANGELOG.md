@@ -6,6 +6,23 @@ All notable releases of the FinPOS app. Each version is also published as a
 The format is based on [Keep a Changelog](https://keepachangelog.com/);
 this project uses [Semantic Versioning](https://semver.org/).
 
+## [0.3.0] — 2026-06-01
+More banks, a clearer Banks tab, and a credit-limit fix.
+
+### Added
+- **UkrSibbank** is now recognised.
+- Each bank in the Banks tab gets a **colour badge** for quick recognition.
+
+### Changed
+- **Google Pay is no longer shown as a bank** (it isn't an account — it's still used behind the
+  scenes to confirm matching purchases).
+
+### Fixed
+- A **credit-limit change** notification ("your credit limit was changed to …") was being counted as
+  a spend — it's now correctly ignored.
+
+[0.3.0]: https://github.com/drdanila/finpos-store/releases/tag/v0.3.0
+
 ## [0.2.0] — 2026-06-01
 See each bank on its own: what came in, what went out, and how much is there now.
 
