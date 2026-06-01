@@ -6,6 +6,21 @@ All notable releases of the FinPOS app. Each version is also published as a
 The format is based on [Keep a Changelog](https://keepachangelog.com/);
 this project uses [Semantic Versioning](https://semver.org/).
 
+## [0.4.0] — 2026-06-01
+Fewer duplicates, and transfers between your own banks handled correctly.
+
+### Fixed
+- A **declined** card payment (e.g. a Glovo charge that didn't go through) was being counted as a
+  spend — declined payments are now ignored.
+- **Duplicate rows** from the same notification arriving twice can no longer slip through.
+
+### Added
+- **Transfers between your own accounts at different banks** (e.g. ПУМБ → monobank) are now detected
+  by matching amount + time and shown as a neutral **Transfer** on both sides, so they don't show up
+  as spending on one and income on the other.
+
+[0.4.0]: https://github.com/drdanila/finpos-store/releases/tag/v0.4.0
+
 ## [0.3.0] — 2026-06-01
 More banks, a clearer Banks tab, and a credit-limit fix.
 
